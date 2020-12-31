@@ -1,0 +1,114 @@
+/*Selector de etiqueta. El problema es que se aplican a todas las etiquetas, se usan para dar estilos generales. */
+/*
+p{
+    color:red;
+}
+
+h1{
+    color: blue;
+}*/
+
+/*Selectores de clase. Para referenciar a la clase se pone un "." */
+/*
+.title{
+    color: green;
+}
+
+.text{
+    color: blueviolet;
+}*/
+
+/*Selectores de id. No se recomienda usar ésto ya que solamente hay un id unico por cada elemento en html. Se usa para las anclas o con javascript para acceder al DOM. Para referenciar al id se usa un "#"*/
+
+/*
+#title{
+    color: aqua;
+}
+
+#text{
+    color:orangered;
+}*/
+
+
+/*Selectores universales. Suele utilizarse solamente para resetear el navegador. Se aplica a todo el documento html*/
+/*
+*{
+    color: red;
+} */
+
+
+/*Selectores de atributo.El atributo se pone entre [].*/
+/*Selecciona los elementos que tienen ese atributo*/
+[href]{
+    color:green;
+} 
+
+/*Selecciona los elementos que tienen ese atributo y ese valor*/
+[href="#"]{
+    color:red;
+}
+
+/*Selecciona los elementos que tienen ese atributo y al menos ese valor una vez*/
+[class~="verde"]{
+    color:green;
+}
+
+/*Selecciona los elementos que tienen ese atributo y exactamente ese valor o empiece por el valor seguido de un guión*/
+[class|="verde"]{
+    color:greenyellow;
+}
+
+/*Selecciona los elementos que tienen ese atributo y empiezan por ese valor*/
+[class^="rojo"]{
+    color:purple;
+}
+
+
+/*Selecciona los elementos que tienen ese atributo y terminan por ese valor*/
+[class$="rojo"]{
+    color:violet;
+}
+
+/*Selecciona los elementos que tienen ese atributo y contengan por ese valor*/
+[class$="rojo"]{
+    color:orangered;
+}
+
+/* Selectores combinadores */
+
+/* Selectores de hermano adyacente. Selecciona a un hermano que esté justo debajo de él. El estilo se aplica al hermano inferior*/
+
+h1+h2{
+    color: red;
+}
+
+h2+h2{
+    color: blue;
+}
+
+/* Selector de hermano general. Selecciona a todos los hermanos que estén por debajo de él. El estilo se aplica a todos los hermanos */
+
+h1 ~ h3{
+    color: green;
+}
+
+/* En este caso no pasaría nada, podemos bajar en la jerarquía pero nunca subir */
+h3 ~ h1{
+    color: blueviolet;
+}
+
+/* Selectores descendentes. */
+/* Aplica los estilos a todos los span que sean hijo de un p (se aplica a todos los hijos) */
+p span{
+    color:red;
+}
+/* También se puede hacer así, el problema es que esto solo se aplicaría a los spans que estan dentro de un div */
+div span{ 
+    color:red;
+}
+
+/* Selector de hijo directo. Selecciona a todos los hijos que sean directos, es decir que no estén dentro de otras etiquetas. El caso de div span como el caso anterior, no se aplicaría, porque span es hijo de directo de p, no hijo directo de div */
+
+div > span{
+    color:blue;
+}
