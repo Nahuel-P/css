@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p id="parrafo" style="color:aqua">Viendo la <a href="#">herencia</a> en CSS</p> <!-- El estilo en linea es demostrativo, es para ver el funcionamiento del peso de la especificidad. El color final es aqua ya que los estilos en linea tiene mayor peso que los demás-->
+    <p class="parrafo">Viendo la <a href="#">cascada</a> en CSS</p>
+    <p id="parrafo">Viendo la <a href="#">cascada</a> en CSS</p>
+    <p class="parrafo-2" style="color: black">Parrafo que quiero cambiar y no puedo por !important</p>
+</body>
+</html>
