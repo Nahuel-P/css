@@ -1,0 +1,8 @@
+.square{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    background: blueviolet;
+} /*Esto no tiene 200 px como se quería realmente, sino, que tiene 200px + 20px del padding + 5px del border.
+    Para eso se usa el box-sizing: borderbox. Calcula el tamaño que tiene que añadir automaticamente, queda 200px en total. */
