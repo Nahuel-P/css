@@ -1,0 +1,50 @@
+/*En la web todo son cajas, al conjunto de esas cajas y la forma en la que el navegador los dibuja se le denomina LAYOUT
+Las propiedades de cada una de las cajas son el ancho (widht) y el alto (height)
+Existen dos tipos de elementos en HTML, elementos en linea (inline) y de bloque (block), estas propiedades se pueden modificar con el atributo display
+
+
+Elementos inline:
+    Son los elementos que ocupan solo su contenido
+    No se puede modificar ni su ancho ni su alto
+    
+Elementos block:
+    Ocupan todo el ancho disponible
+    Se les puede asignar ancho y alto*/
+
+
+img{
+  max-width: 100%;
+}
+
+h1{
+    background: steelblue;
+    height: 150px;
+    width: 100px;
+}
+h2{
+    background: blueviolet;
+    width: 50px; /*Por más que tenga un widh de 50px, nunca se va a poner al lado del h1, ya que el h1 tiene espacio reservado que ocupa toda la página ya que es un elemento de bloque*/
+}
+
+a{
+    background: green;
+    width: 300px;
+    height: 300px;/*No importa cuanto width y height ya que es un elemento en linea, su ancho y alto es determinado por su contenido*/
+}
+
+
+.box-1{
+    width: 100px;
+    height: 100px;
+    background: steelblue;
+    padding: 10px; /*Hay más separación entre el contenido y el borde, pero el contenido no modifica su valor*/
+    border: 2px solid darkgrey; /*Sus dimensiones cuentan para el tamaño total*/
+    margin:20px; /*Separa 20px por todas las direcciones*/
+    outline: 10px solid red;/*Sus dimensiones NO cuentan para el tamaño total*/
+}
+.box-2{
+    width: 100px;
+    height: 100px;
+    background: lightseagreen;
+}
+
