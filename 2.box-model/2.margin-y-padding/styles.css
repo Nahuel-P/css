@@ -1,0 +1,54 @@
+/*Margin es la separación entre una caja y las cajas adyacentes.
+Margin es un shorthand, es la propiedad acortada que engloba a otras propiedades, cuando pones margin nos referimos a lo siguiente:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Va en ese orden ya que va en el sentido de los agujas del reloj
+
+Si ponemos 1 valor:
+Margin: 1em; se aplica a (top right bottom left)
+
+En caso de poner 2 valores:
+Margin: 1em 2em; se aplica 1em en el eje vertical, y 2em en el eje horizontal (Y X)
+
+En caso de poner 3 valores:
+Margin: 1em, 2em, 3em; Se aplica 1em al top, 2em al eje X (left y right) y 3em al bottom(top,X,bottom)
+
+En caso de poner 4 valores:
+Margin: 1em 2em 3em 4em; Se aplica en el siguiente orden (top right bottom left)
+
+Con padding pasa exactamente lo mismo
+Es la separación entre el contenido y su borde*/
+
+
+.box1{
+    width: 200px;
+    height: 200px;
+    background: lightseagreen;
+    /* margin: 1em 2em 3em 4em; */
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 3em;
+    margin-left: 4em;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background: magenta;
+    border: 2px solid blue;
+    /* padding: 1em 2em 3em 4em; */
+    padding-top: 1em;
+    padding-right: 2em;
+    padding-bottom: 3em;
+    padding-left: 4em;
+}
+
+.box2-content{
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border: 2px solid red;
+}

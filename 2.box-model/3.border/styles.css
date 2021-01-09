@@ -1,0 +1,86 @@
+/*
+Border es la linea que rodea la caja
+Igual que padding y margin, es un shorthand
+
+Las propiedades de los bordes son: 
+Width
+Style
+Color
+
+
+Existen varias combinaciones, entre ellas
+border-width: 2px; se aplica a (top right bottom left)
+border-style: solid dotted; se aplica solid al eje Y y dotted al eje X (Y X)
+border-color: red blue green; (top X bottom)
+border-width: 2px 3px 4px 5px; (top right bottom left)
+
+
+
+
+
+border-width
+    px|em|rem|%|....
+border-style
+    none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+    *Estas medidas dependen del navegador* (No recomendado)
+    thick (ancho)
+    medium (medio)
+    thin (fino)
+        
+border-color
+    css native|rgb|rgba|hsl|hsla|hexadecimal|transparent
+border-top-(width | style | color)
+border-right-(width | style | color)
+border-bottom-(width | style | color)
+border-left-(width | style | color)
+*/
+
+[class*=box] {
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+}
+
+.box1{
+    background: greenyellow;
+    border: 5px solid red;
+    border-top-width: 100px;
+    border-top-color: transparent;
+}
+
+.box2{
+    background: lightseagreen;
+    border-left-width: 5px;
+    border-left-style:dotted;
+    border-left-color: blue;
+}
+
+.box3 {
+    background: lightcoral;
+    border: 5px dashed blue;
+}
+
+.box4 {
+    background: yellowgreen;
+    border: 5px double blue;
+}
+
+.box5 {
+    background: lightseagreen;
+    border: 5px groove blue;
+}
+
+.box6 {
+    background: lightcoral;
+    border: 5px ridge blue;
+}
+
+.box7 {
+    background: yellowgreen;
+    border: 5px inset blue;
+}
+
+.box8 {
+    background: lightseagreen;
+    border: 5px outset blue;
+}
