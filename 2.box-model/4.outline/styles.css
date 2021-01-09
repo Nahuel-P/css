@@ -1,0 +1,55 @@
+/*Outline es la linea que rodea a la caja entre el border y el margin 
+Outline es un shorthand
+
+Las propiedades de outline son:
+
+    Width
+    Style
+    Color
+    Offset
+    
+    
+Existen vvarias combinaciones (son exactamente iguales que con border)
+outline-width: 2px; (top right bottom left)
+outline-style: solid dotted; (Y X )
+outline-color: red blue green; (top X bottom)
+outline-width: 2px 3px 4px 5px; (top right bottom left)
+outline-offset: +-px | em | rem...
+
+
+
+outline-style
+    none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+    *Estas medidas dependen del navegador*
+    thick (ancho)
+    medium (medio)
+    thin (fino)
+        
+outline-color
+    css native|rgb|rgba|hsl|hsla|hexadecimal|transparent
+outline-top-(width | style | color)
+outline-right-(width | style | color)
+outline-bottom-(width | style | color)
+outline-left-(width | style | color)*/
+
+.img-box{
+    width: 90%;
+    margin: 2em auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    border: 5px solid steelblue;
+    outline: 5px solid steelblue;
+    outline-offset: 10px; /*Lo que hace es separarse 10px de la caja, pero sin empujar al parrafo hacia abajo*/
+    outline-offset: -15px; /*También admite valores negativos, hace que el borde se meta para adentro*/
+}
+
+.text{
+    position: absolute;
+    color: steelblue;
+    font-size: 4em;
+}
