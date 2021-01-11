@@ -1,0 +1,32 @@
+/*Position es la propiedad que nos permite modificar el flujo del HTML (No es lo mismo el flujo de HTML que en la programación. El flujo en HTML es el orden en el que aparecen los elementos, si ponemos un h1 y debajo un p, ese es el flujo del HTML, primero se dibuja el h1 y después el p)
+
+Los valores de position son:
+    Static (Valor por defecto). Si no se modifica, no se considera que el elemento que esté posicionado. Que un elemento esté posicionado implica implica cosas, que se consigue con los siguientes atributos
+    Relative
+    Absolute
+    Fixed
+    Sticky
+
+Al tener un elemento posicionado podemos moverlo en los 3 ejes:
+    top: se puede mover el elemento en relación a la parte superior.
+    right: se puede mover el elemento en relación a la parte derecha.
+    bottom: se puede mover el elemento en relación a la parte inferior.
+    left: se puede mover el elemento en relación a la parte izquierda.
+    z-index: se puede mover el elemento en el eje Z (Implica si dos elementos se solapan, es decir, hay uno encima de otro, con z-index se puede decidir cual aparece encima de cuál)
+*/
+
+
+.title{
+    text-align: center;
+    font-size:3em;
+}
+
+p{
+    font-size:2em;
+} /*La manera correcta es dar atributos a través de clases, pero para demostración se hizo a través de etiquetas*/
+
+
+.parrafo-1{
+    /* visibility: hidden; El elemento se oculta pero el espacio sigue estando reservado */
+    display:none; /*El elemento desaparece y el espacio reservado ya no se conserva. El elemento es como si no estuviera en el documento*/
+}
