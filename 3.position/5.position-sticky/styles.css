@@ -1,0 +1,23 @@
+/*El valor sticky es una mezcla entre relative y fixed
+El elemento conserva su espacio en el flujo
+Si no tiene dimensiones declaradas, sus dimensiones se ajustan al contenido.
+Su punto de referencia no se modificará aunque movamos el elemento
+Cuando hacemos scroll el elemento se moverá hasta alcanzar el tope establecido*/
+
+.slide{
+    height: 300px;
+    background: grey;
+    font-size:3em;
+    text-align: center;
+    line-height: 6em;
+}
+
+.menu{
+    background: darkcyan;
+    padding: .5em;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    position: sticky;
+    top: 0px;/*Este es el tope, es cuando el menu está a X px del top del viewport, cambia su comportamiento como un fixed. Y cuando no está a esa posición, se comporta como position relative */
+}

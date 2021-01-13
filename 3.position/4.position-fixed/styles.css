@@ -1,0 +1,30 @@
+/*El valor fixed hace que el elemento se coloque respecto al viewport 
+El elemento no conserva su espacio en el flujo
+Si no tiene dimensiones declaradas, sus dimensiones se ajustan al contenido
+Su punto de referencia no se modificará aunque movamos al elemento
+Cuando se hace scroll el elemento no se moverá, se queda fijo.*/
+
+body{
+    margin-top: 6em;
+    /* padding-top: 6em; Sirven ambas opciones, de todas maneras, es recomendable solamente usar 1 a la vez */
+}
+.menu{
+    background: darkcyan;
+    padding: .5em;
+    text-align: center;
+    font-size: 2em;
+    position: fixed;
+    top: 0; /*Ya que el elemento fixed se coloca dentro del viewport ( y está posicionado), es decir, toda la pantalla, no importa si el body tiene un padding-top o margin-top de 400px, siempre va a estar arriba del todo el menú*/
+    /* bottom:0; en caso de un footer que esté fijo siempre, se usa bottom: 0 */
+    width: 100%;
+    }
+
+
+.title{
+    margin:0;
+}
+
+
+.text{
+    
+}
