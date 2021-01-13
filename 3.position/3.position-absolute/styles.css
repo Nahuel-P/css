@@ -1,0 +1,66 @@
+/*El valor absolute hace que el elemento se coloque respecto a su contenido posicionado más cercano, si no encuentra ninguno, será el viewport (Es el espacio disponible para la página, sería el body de html)
+El elemento no conserva su espacio en el flujo.
+Si el elemento no tiene dimensiones declaradas, sus dimesiones se ajustan al contenido
+Su punto de referencia no se modificará aunque movamos el elemento*/
+
+
+.container{
+    width: 300px;
+    height:300px;
+    margin-top: 300px;/*Se mueve el contenedor, pero las cajas de adentro no se mueven porque están colocadas a base de este contenedor*/
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    position: relative; /*Position relative hace que el contexto de las cajas sea este contenedor (el borde negro)*/
+}
+
+[class^=box]{
+    width: 50px;
+    height: 50px ;
+}
+
+.box-out{
+    border:4px solid violet;
+    position:absolute;
+    bottom:0; /*Ya que no tiene un contenido posicionado, se adapta al viewport. Es decir, se va a la parte más baja de la página*/
+}
+
+.box1{
+    border: 4px solid lightcoral;
+    position: absolute;
+    left: 20px; /*No va a contar desde el viewport, va a contar desde su contenedor*/
+    top:0;
+    left: 0;
+}
+
+.box2{
+    border: 4px solid blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box3{
+    border: 4px solid green;
+    position: absolute;
+    bottom:0;
+    left:0;
+
+}
+
+.box4{
+    border: 4px solid lightseagreen;
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+.box5{
+    border: 4px solid darkorange;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;/*Al colocar el margen automaticamente, lo pone en el centro ya que la distancia entre todos los lados es exactamente la misma.  */
+}
