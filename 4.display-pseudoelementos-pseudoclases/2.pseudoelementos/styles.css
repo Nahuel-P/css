@@ -1,0 +1,54 @@
+/*Los pseudoelementos se usan para dar estilo a partes especificas de un elemento. La sintaxis es selector::pseudo-elemnt {estilos}
+Existen 5 pseudoelementos
+
+::first-letter(Elemento de bloque o un inline-block)
+::first-line(elemento de bloque)
+::selection Le da estilo a un pedazo de texto que el usuario seleccione (Retirado de la especificación)
+::before
+::after
+    La propiedad content es obligatoria
+    Son elementos de linea por defecto
+    Son hijos del elemento al que pertenecen
+ */
+
+.title::first-letter{
+    color:red;
+    font-size: 2em;
+}
+
+.text::first-line{
+    font-size: 3em;
+    color: lightskyblue;
+}
+
+
+.inline{
+    display:block;/*Se le da esta propiedad para demostrar que funcina el pseudoelemento*/
+}
+
+.inline::first-letter{
+    color:red;
+    font-size: 2em;
+}
+
+.text::selection{
+    color:white;
+    background: blueviolet;
+}
+
+.dolar::before{
+    content: '$'; /* Se pueden dibujar imagenes, atributos, etc */
+}
+
+.dolar::after{
+    content:'.00'; /*Se puede dejar vacio, pero es obligatorio que la propiedad content exista */
+}
+
+.dolar2::before,
+.dolar2::after{
+    content: '';
+    display: block; /*Se usa display block ya que al ser un elemento de linea, no tiene dimensiones*/
+    width: 20px;
+    height: 20px;
+    background: red;
+}

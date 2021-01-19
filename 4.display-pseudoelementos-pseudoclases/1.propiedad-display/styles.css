@@ -1,0 +1,34 @@
+/*
+La propiedad display nos permite definir como se comporta una caja
+De forma natural existen elementos en linea y elementos en bloque
+Los valores de esta propiedad son:
+    inline: Establece que la caja se comporta como si fuere un elemento en linea (No admiten dimensiones (width y height). Admiten margin y padding pero no afectan al flujo vertical, solo al horizontal)
+    block: Establece que la caja se comporta como si fuera un elemento en bloque
+    inline-block: Se comporta como un elemento en linea pero acepta width y heigth
+    none: Oculta el elemento pero se sigue renderizando
+    table: Imita el comportamiento de una tabla (Ya casi no se utiliza)
+    list-item: Imita el comportamiento de una lista (Ya casi no se utiliza)
+    
+    flex- Maquetar componentes
+    grid: Maquetar layout*/
+
+    [class*=inline]{
+        background: lime;
+        margin-right: 3em;
+        margin-bottom: 30em; /*Esto no hace nada sin inline-block*/
+        padding-bottom: 5em; /*El padding si se aplica pero al elemnento del bloque no le hace nada, sigue en su lugar*/
+        display: inline-block; /*Nos permite tener elementos en linea el cual nos permite aplicar margenes, anchos y altos*/
+        height: 400px;
+        margin-bottom: 2em;
+    }
+
+    .inline-2{
+        background: lime;
+        display: none; /*Se recomienda usar display none cuando por requisitos de la página hay que ocultar y mostrar un elemento dinamicamente.
+        Se siguen utilizando recursos de la página aunque tenga ese atributo. No se respeta su espacio en el flujo ya que el elemento no está.   */
+    }
+
+    .block{
+        background: yellow;
+        margin-top: 3em; /*Al ser un elemento de bloque, accede a todas las propiedades del box model y afectan el flujo de los elementos*/
+    }
