@@ -1,0 +1,101 @@
+/*Las pseudoclases son selectores que reaccionan en tiempo real detectando la interacción del usuario con algunos elementos
+Funcionan con todos los selectores de css
+No están atados a ningún elemento
+
+Su sintaxis es: 
+    selector: pseudoclase{
+        estilos
+    }
+    
+En el caso que no haya un selector:
+    :pseudoclase{
+        estilos
+    }
+    
+    
+Dynamic
+    :link (links) - Link no visitado
+    :visited (links) - Link visitado
+    :active (links) - El momento del click
+    :hover - Al poner el mouse sobre el elemento
+    :focus - Cuando el elemento tiene el foco
+Target
+    :target - Elemento es objetivo de un marcador o ancla
+Language
+    :lang() - Elemento que contiene el atributo lang que especifiquemos
+*/
+
+
+.title:hover{
+    color: cyan; /*Cambia cuando se pasa el mouse por arriba (Al ser un elemento de bloque h1, aunque se pase el mouse por el margen derecho, cambia)*/
+}
+
+.link:link{
+    color: red;
+}
+
+.link:visited{
+    color: chartreuse
+}
+
+.link:active{
+    color:cyan;
+    background: red;
+}
+
+.button{
+    text-decoration: none;
+    display: inline-block;
+    background: blueviolet;
+    padding: .5em;
+    border-radius: 10px;
+    color: white;
+}
+
+.button:active{
+    transform: scale(.9) /*Se cambia la escala a .9. La escala normal sería 1, y cuando se da click, cambia a 0.9*/
+}
+
+.button:hover{
+    color: blueviolet;
+    background: white;
+    border: 1px solid blueviolet; /*No es necesario poner el color 'blueviolet' ya que los bordes por defecto agarran el color de la propiedad color*/
+    border-radius: 10px;
+}
+
+.input:focus{
+    background: whitesmoke;
+}
+
+.menu{
+    background:lightblue;
+    display: block;
+    padding:1em;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+}
+
+.text{
+    margin-top:1200px;
+    margin-bottom:1200px;
+}
+
+.text:target{
+    padding-top:75px;   
+}
+
+.span{
+    display:block;
+}
+
+.span:lang(en){
+    color: red;
+}
+
+.span:lang(es){
+    color: blue;
+}
