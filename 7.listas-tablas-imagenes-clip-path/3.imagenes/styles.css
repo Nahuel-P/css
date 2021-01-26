@@ -1,0 +1,82 @@
+/* 
+    No existen propiedades para imágenes en CSS
+    1. Imágenes responsive. En el archivo base se recomienda poner esta regla
+        img{
+            max-width:100%;
+        }
+    
+    2. Las imágenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos formas.
+        Dando un line-height:0 al contenedor o un display:block a la imagen
+    3. Centrado horizontal
+        imagen con display:block y márgenes laterales automáticos
+        text-align: center, si la imagen no es de bloque
+    4. Centrado vertical
+        Flexbox (La mejor opción)
+        vertical-align: middle. A la imagen y al texto
+*/
+
+
+/*Imagen café*/
+/* .img-container{
+    width:150px;
+} */
+
+
+/*Imagen nieve*/
+/* .img-container{
+    background: red;
+} */
+
+/*Aparece en la página el contenedor de la imagen, para evitar eso hay 2 maneras*/
+
+/*1*/
+/* .img{
+    display:block;
+} */
+
+/*2*/
+/* .img-container{
+    line-height: 0;
+} */
+
+
+/*Imagen logo - PARA CENTRAR*/
+
+/* .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}*/ /*Esta es la manera para centrar la imagen en caso que la imagen sea de bloque*/
+
+/*.img-container{
+    background:lavenderblush;
+    text-align: center; Esto es en caso que la imagen no sea un elemento de bloque
+}*/
+
+
+/* Centrar verticalmente
+.img-container{
+    text-align: center;
+    background: lavender;
+}*/
+
+
+/* Más de una linea de texto
+.img-container img, .img-container span{
+    vertical-align: middle;
+} 
+
+.img-container{
+    display:table;
+}
+
+
+.img-container span, .img-container p{
+    display:table-cell;
+} */
+
+/*con flexbox*/
+.img-container{
+    display:flex;
+    align-items: center;
+}
