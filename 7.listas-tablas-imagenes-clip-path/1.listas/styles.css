@@ -1,0 +1,86 @@
+/* 
+    Normalmente necesitamos resetear los estilos por defecto de una lista
+        margin-top:0;
+        margin-bottom:0;
+        padding-left:0;
+    Hay tres propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista
+    list-style-type: Establece el estilo de viñeta
+        disc (un disco, un punto negro)
+        circle (un disco sin relleno)
+        square (un cuadrado)
+        decimal (Se comporta como un ol en vez de un ul)
+        decimal-leading-zero (Pone un 0 por delante en el decimal)
+        lower-roman (números romanos en minusculas)
+        upper-roman (numeros romanos en mayúsculas)
+        lower-greek (letras griegas en minusculas)
+        lower-latin (letras minisculas)
+        upper-latin (letras mayusculas)
+        armenian (alfabeto armenio)
+        georgian (alfabeto geogiano)
+        lower-alpha (no vemos la diferencia ya que nuestro alfabeto latino, en caso que una persona de rusia ponga esta propiedad, se pone el alfabeto ruso en minusculas)
+        upper-alpha
+    list-style-position: Hace que las viñetas se coloquen por dentro o por fuera del elemento
+        outside | inside
+        
+    list-style-image: Pone una imagen en lugar de la viñeta, no se suele utilizar porque hay formas mucho más eficientes de hacerlo
+        url(imagen)
+    Normamente se suele usar el shorthand list-style
+*/
+
+/* .list{
+    list-style-type: lower-latin;
+} */
+
+
+/* .list{
+    list-style-image: url(assets/images/check.png);
+} No se suele usar esto ya que la imagen tiene un tamaño definido y no se puede cambiar las dimensiones. Hay formas mas eficientes de hacerlo, se puede usar un pseudoelemento :before o aplicar al item un background   */
+
+/* .list{
+    list-style-type: none;
+} */
+
+/* .list__item::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(assets/images/check.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 1em;;
+} */
+
+/*U OTRA MANERA ES LA SIGUIENTE*/
+
+/* 
+.list__item{
+    background-image: url(assets/images/check.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+ 
+También se puede utilizar el shorthand background:
+    background: url(assets/images/check.png) 0 0 / contain no-repeat; 
+} */
+
+/*
+Demostración lista inside
+.list{
+    list-style-position: inside;
+}
+
+.list__item{
+    background:red;
+} */
+
+
+/*Para resetear estilos de una lista*/
+.list{
+    margin-top:0;
+    margin-bottom:0;
+    padding-left:0;
+    list-style:none;
+}
