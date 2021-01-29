@@ -29,7 +29,7 @@ body{
 }
 
 .box__item{
-    background: lightcoral;
+    background: purple;
     width: 400px;
     height: 400px;
     /* clip-path: circle(100px at left top); */
