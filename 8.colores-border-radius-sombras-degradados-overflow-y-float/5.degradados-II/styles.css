@@ -1,0 +1,26 @@
+.box{
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    margin: 2em auto;
+    /* background-image: linear-gradient(45deg, 
+    blue 25%,
+    red 25%,
+    red 50%,
+    blue 50%,
+    blue 75%,
+    red 75%);
+    background-size: 30px 30px; */
+    /*Se requieren calculos más complejos para que se repita el patrón, entonces se suele utilizar repeating-linear-gradient*/
+    background-image: repeating-linear-gradient(30deg,
+    red 0,
+    red 10px,
+    blue 10px,
+    blue 20px);
+    /*En caso que se quiera hacer un circulo se usa repeating-radial-gradient*/
+    background-image: repeating-radial-gradient(circle 20px,
+    red 0,
+    red 10px,
+    blue 10px,
+    blue 20px)
+}
