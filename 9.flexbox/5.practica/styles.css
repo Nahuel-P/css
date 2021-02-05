@@ -74,7 +74,7 @@ img{
 .form__textarea{
     resize: none;
     border: 1px solid #eee;
-    height: 100px;
+    flex-basis: 100px;
 }
 
 .form__submit{
