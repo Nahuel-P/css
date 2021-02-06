@@ -1,0 +1,48 @@
+ /*
+ Grid es un modelo de layout que permite construir grillas o cuadriculas dinámicas. Es un valor de la propiedad display.
+ Al igual que con flexbox, está display: grid y display: inline-grid
+ Se necesitan un contenedor (grid-container) y al menos un hijo (grid-item)
+ Las celdas son los items, el contenedor es el contexto al que pertenecen los items 
+
+ Terminología: 
+ Grid column: Es cada columna de la cuadricula.
+ Grid row: Es cada fila de la cuadricula.
+ Grid cell: Es cada celda de la cuadricula.
+ Grid gap: Es la separación entre celdas.
+ Grid line: Existen column lines y row lines, son las lineas que delimitan cada columna/fila respectivamente.
+
+ Ventajas:
+ Cada celda es dinámica y el resto de la cuadrícula se adapta.
+ Se puede decir donde empieza cada celda y donde termina, tanto en fila como columna.
+Tiene inmesas posibilidades.
+Tiene soporte total excepto internet explorer
+ */
+
+
+ body{
+     font-family: sans-serif;
+     background-image: radial-gradient(circle, blueviolet, rgb(69, 0, 98));
+     background-repeat: no-repeat;
+     margin: 0;
+     color: #eee;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 100px 50px 150px 10px;/*Establece el número de columnas con medidas*/
+    grid-template-rows: 100px 120px 50px; /*Establece el número de filas con medidas*/
+    grid-gap: 10px; /*Establece la separación entre las celdas*/
+    grid-column-gap: 60px ; /*Establece la separación entre columnas*/
+    grid-row-gap: 40px; /*establece la separación entre filas*/
+}
+
+ .grid-item{
+     border: 1px solid;
+     text-align: center;
+     padding: 1rem;
+     font-size: 2rem;
+ }
