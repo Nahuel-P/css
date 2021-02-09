@@ -1,0 +1,43 @@
+/*
+    Medidas de la cuadrícula
+        Se pueden dar medidas con cualquiera de las unidades que ya conocemos y dos más que vienen con grid, fr y auto
+            fr: Equivale a n fracciones del espacio disponible después de establecer las medidas fijas.
+            auto: Equivale al espacio que quede después de repartir todos elementos, es el último que se reparte. El tamaño mínimo del item será el espacio del contenido + el padding si lo tuviera
+    función repeat()
+        Con la función repeat podemos establecer repeticiones de medidas o patrones.
+        En el caso "simple" recibiría 2 parámetros (valores):
+            repeat(nColumnas o nFilas, medida)
+            grid-template-columns: repeat(4,100px) es lo mismo que grid-template-columns: 100px 100px 100px 100px;
+        Si como segundo valor añadimos más de una medida, construiremos un patrón, no hay límite de valores.
+            grid-template-columns: repeat(2, 100px 50px...) es lo mismo que grid-template-columns: 100px 50px 50px 100px;
+*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, blueviolet, rgb(69, 0, 98));
+    background-repeat: no-repeat;
+}
+
+.grid-container{
+    display: grid;
+    /*grid-template-columns: 50px 2fr 1fr; De todo el espacio disponible que queda después de meter los 50px se divide entre 3 ya que es el espacio  que hay que asignar (se le asigna 2 partes a la columna del medio de esa división y 1 para la última)*/
+    /*grid-template-columns: 100px 100px auto 100px;Auto funciona diferente, después de repartir el espacio que hace falta, auto es el espacio sobrante. El tamaño minimo que va a tener un elemento con auto va a ser el que necesite ese item para el contenido y el padding si lo tuviera  */
+    /*grid-template-columns: repeat(3,100px);Esto equivale a grid-template-columns: 100px 100px 100px;*/
+    /*grid-template-columns: 100px repeat(3,50px);Se puede combinar valores, es decir, la primera columna va a tener 100px y lo demás van a ser 3 columnas de 50px cada una*/
+    grid-template-columns: repeat(3,50px 100px);/*Se van repitiendo los valores, la primera columna va a ser de 50px, la 2da de 100px, la 3era de 50px y así 3 veces*/
+}
+
+.grid-item {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
