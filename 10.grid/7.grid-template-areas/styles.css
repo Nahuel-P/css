@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, blueviolet, rgb(69, 0, 98));
+    background-repeat: no-repeat;
+}
+
+.main{
+    display:grid;
+    /*Se establecen las columnas y las filas con nombres.En esta parte se establece donde va cada elemento, no se están estableciendo medidas, se puede usar grid-template-columns y grid-template-rows */
+    grid-template-columns: 150px repeat(2,1fr);
+    grid-template-areas: 
+        "header header header"/*Primera fila con 3 columnas*/
+        "aside article article" /*Segunda fila con 3 columnas*/
+        "footer footer -";/*Tercer fila con 3 columnas. SE pone un . o un - para indicar que no se muestre nada*/
+}
+
+.header,
+.footer{
+    padding:2rem 0;
+    text-align: center;
+    background: peru;
+}
+
+.header{
+    grid-area: header;/*Estableciendo el nombre para grid-template-areas*/
+}
+
+.aside{
+    background: hotpink;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    grid-area: aside;/*Estableciendo el nombre para grid-template-areas*/
+}
+
+.article {
+    background: royalblue;
+    padding: 1rem;
+    grid-area: article;/*Estableciendo el nombre para grid-template-areas*/
+}
+
+.footer{
+    grid-area: footer;/*Estableciendo el nombre para grid-template-areas*/
+
+}
