@@ -3,6 +3,7 @@
         Se pueden dar medidas con cualquiera de las unidades que ya conocemos y dos más que vienen con grid, fr y auto
             fr: Equivale a n fracciones del espacio disponible después de establecer las medidas fijas.
             auto: Equivale al espacio que quede después de repartir todos elementos, es el último que se reparte. El tamaño mínimo del item será el espacio del contenido + el padding si lo tuviera
+            
     función repeat()
         Con la función repeat podemos establecer repeticiones de medidas o patrones.
         En el caso "simple" recibiría 2 parámetros (valores):

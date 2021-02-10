@@ -1,0 +1,74 @@
+/*
+    Explicit grid:
+        Es el grid que declaramos, tanto con grid-template-columns como con grid-template-rows.
+
+    Implicit grid:
+        Es el grid que no declaramos, los items que quedan fuera del explicit grid.
+
+    grid-auto-columns:
+        Establece qué hacer con las columnas no definidas.
+        
+    grid-auto-rows:
+        Establece qué hacer con las filas no definidas.
+    
+    grid-auto-flow:
+        Establece la dirección en la cual se va a pintar el implicit grid. Admite 3 valores: 
+            row(default): Se crearán filas adicionales.
+            column: Se crearán columnas adicionales.
+            dense: Establece qué hacer con los huecos que queden.
+*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, blueviolet, rgb(69, 0, 98));
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/*Explicit grid*/
+    grid-template-rows: repeat(2, 100px);/*La tercera fila está en el implicit grid, ya que se está declarando 2 filas, y la última solo ocupa lo que tiene que ocupar.*/
+    /*grid-auto-rows: 200px; La diferencia entre grid-template y grid-auto, es que template es lo que declaramos, y auto es lo que se genera porque no lo establecí antes.*/
+    /* grid-auto-columns: 130px;
+    grid-auto-flow: column; */
+    grid-auto-flow: column dense;
+    
+}
+
+.grid-item {
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.grid-item:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 2 / 4;
+    background: purple;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: 2 / 6;
+    background: orange;
+}
+
+.grid-item:nth-child(5) {
+    grid-column: span 5;
+    grid-row: span 2;
+    background: peru;
+}
+
+.grid-item:last-child {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: royalblue;
+}
