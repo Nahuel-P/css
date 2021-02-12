@@ -1,0 +1,80 @@
+/*El responsive web design no es un estándar, no es css, es un conjunto de patrones de diseño.
+Su objetivo es que cualquier página se vea bien independientemente del dispositivo
+
+Se basa en 3 conceptos fundamentales:
+-Columnas fluidas
+-Imagenes flexibles: max-width 100%
+-Media querys 
+
+Columnas fluidas:
+Para conseguir un sistema de columnas o de cajas fluidas es tan sencillo como aplicar los anchos en porcentaje
+
+NO hay que asignar todos los anchos en procentaje, solo se aplica a los elementos que necesiten cambiar su tamaño
+
+Media Querys - Concepto:
+Son condicionales para que el navegador sepa cómo actuar en función de la condición.
+
+-all: Apto para todos los dispositivos.
+-print: Destinados a material impreso y visualización del modo de vista previa de impresión.
+-screen: Destinado principalmente a las pantallas.
+-speech: Destinado a sintetizadores de voz.
+
+Sintaxis: @media "tipo de medio" and | or (condición)
+las condiciones más utilizadas son min-width y orientation
+
+@media screen and (min-width: 360px)
+@media screen and (max-width: 1024px) and (orientation: landscape)
+@media screen and (max-width:480) or (orientation: portrait)
+
+Metodologías:
+Mobile-first: Consiste en hacer primero el diseño móvil e ir subiendo de tamaño
+Desktop-first: Consiste en hacer primero el diseño de escritorio e ir bajando de tamaño
+Content-first: Consiste en saber primero todo el contenido de la web y después se hace el diseño*/
+
+body{
+    margin: 0;
+    color: #eee;
+    background-image: radial-gradient(circle, blueviolet, rgb(69, 0, 98));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+/* Con flexbox:
+.flexbox{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.flexbox__item{
+    margin:2rem;
+    min-width: 320px;
+
+    flex: 1 1 320px;
+} */
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr) );
+    grid-gap: 2rem;
+    padding: 1rem;
+}
+
+
+.banner{
+    background-color: royalblue;
+    padding: 15vmin;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.footer{
+    background-color:hotpink;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: auto;
+}
